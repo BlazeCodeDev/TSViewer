@@ -6,8 +6,8 @@
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    val aboutLibrariesVersion by extra("10.9.1")
-    val composeVersion by extra("1.6.0-alpha07")
+    val aboutLibrariesVersion by extra("11.2.3")
+    val composeVersion by extra("1.7.4")
     val wearComposeVersion by extra("1.3.0-alpha07")
 
     repositories {
@@ -19,8 +19,8 @@ buildscript {
         maven { url = uri("https://plugins.gradle.org/m2/")}
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:8.1.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
+        classpath("com.android.tools.build:gradle:8.6.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.21")
 
         //ABOUT LIBRARIES
         classpath("com.mikepenz.aboutlibraries.plugin:aboutlibraries-plugin:$aboutLibrariesVersion")
@@ -36,5 +36,6 @@ allprojects {
 }
 
 plugins {
-    id("com.google.devtools.ksp") version "1.8.10-1.0.9" apply false
+    id("com.google.devtools.ksp") version "2.0.21-1.0.26" apply false
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.21" apply false
 }
